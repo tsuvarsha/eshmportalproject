@@ -8,7 +8,14 @@
         <IconTabBar id="idIconTabBar" expanded="true" class="sapUiResponsiveContentPadding">
             <items>
                 <IconTabFilter icon="sap-icon://alert" text="Risk Management" key="risk" iconColor="Critical">
-                    <Table id="riskTable" items="{/Z_RISKSet}" growing="true" growingThreshold="20" width="auto">
+                    <Table id="riskTable" items="{
+                        path: '/Z_RISKSet',
+                        filters: [{
+                            path: 'Plant',
+                            operator: 'EQ',
+                            value1: 'AT01'
+                        }]
+                    }" growing="true" growingThreshold="20" width="auto">
                         <headerToolbar>
                             <OverflowToolbar>
                                 <Title text="Risk Assessment" level="H2"/>
@@ -39,7 +46,14 @@
                     </Table>
                 </IconTabFilter>
                 <IconTabFilter icon="sap-icon://accident" text="Incident Management" key="incident" iconColor="Negative">
-                   <Table id="incidentTable" items="{/Z_INCIDENTSet}" growing="true" growingThreshold="20" width="auto">
+                    <Table id="incidentTable" items="{
+                        path: '/Z_INCIDENTSet',
+                        filters: [{
+                            path: 'Plant',
+                            operator: 'EQ',
+                            value1: 'AT01'
+                        }]
+                    }" growing="true" growingThreshold="20" width="auto">
                         <headerToolbar>
                             <OverflowToolbar>
                                 <Title text="Reported Incidents" level="H2"/>

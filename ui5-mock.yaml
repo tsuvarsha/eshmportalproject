@@ -37,6 +37,6 @@ server:
         services:
           - urlPath: /sap/opu/odata/sap/Z_EHSM_TATA_SRV
             metadataPath: ./webapp/localService/mainService/metadata.xml
-            mockdataPath: ./webapp/localService/mainService/data
+            mockdataPath: ./webapp/localService/mainService/mockdata
             generateMockData: true
         annotations: []
