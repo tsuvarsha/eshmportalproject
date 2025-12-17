@@ -33,13 +33,3 @@ server:
           - path: /sap
             url: http://172.17.19.24:8000
             destination: PORTAL_T
-    - name: sap-fe-mockserver
-      beforeMiddleware: csp
-      configuration:
-        mountPath: /
-        services:
-          - urlPath: /sap/opu/odata/sap/Z_EHSM_TATA_SRV
-            metadataPath: ./webapp/localService/mainService/metadata.xml
-            mockdataPath: ./webapp/localService/mainService/data
-            generateMockData: true
-        annotations: []

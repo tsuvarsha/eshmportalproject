@@ -51,6 +51,7 @@
                             <Column><Text text="Category"/></Column>
                             <Column><Text text="Priority"/></Column>
                             <Column><Text text="Status"/></Column>
+                            <Column width="8em"><Text text="Date"/></Column>
                             <Column><Text text="Plant"/></Column>
                         </columns>
                         <items>
@@ -59,8 +60,9 @@
                                     <Text text="{IncidentId}"/>
                                     <Text text="{IncidentDescription}"/>
                                     <Text text="{IncidentCategory}"/>
-                                    <ObjectStatus text="{IncidentPriority}" state="Warning"/>
+                                    <ObjectStatus text="{IncidentPriority}" state="{= ${IncidentPriority} === 'High' ? 'Error' : ${IncidentPriority} === 'Medium' ? 'Warning' : 'Success'}"/>
                                     <ObjectStatus text="{IncidentStatus}" state="None"/>
+                                    <Text text="{path: 'IncidentDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' }}"/>
                                     <Text text="{Plant}"/>
                                 </cells>
                             </ColumnListItem>
