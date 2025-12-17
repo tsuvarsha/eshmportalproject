@@ -49,7 +49,8 @@
                             <Column><Text text="Incident ID"/></Column>
                             <Column><Text text="Description"/></Column>
                             <Column><Text text="Category"/></Column>
-                            <Column><Text text="Severity"/></Column>
+                            <Column><Text text="Priority"/></Column>
+                            <Column><Text text="Status"/></Column>
                             <Column><Text text="Plant"/></Column>
                         </columns>
                         <items>
@@ -58,7 +59,8 @@
                                     <Text text="{IncidentId}"/>
                                     <Text text="{IncidentDescription}"/>
                                     <Text text="{IncidentCategory}"/>
-                                    <ObjectStatus text="{IncidentSeverity}" state="Error"/>
+                                    <ObjectStatus text="{IncidentPriority}" state="Warning"/>
+                                    <ObjectStatus text="{IncidentStatus}" state="None"/>
                                     <Text text="{Plant}"/>
                                 </cells>
                             </ColumnListItem>
