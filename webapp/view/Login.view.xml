@@ -4,7 +4,7 @@
     <Page id="loginPage" showHeader="false" class="loginPageBackground">
         <FlexBox justifyContent="Center" alignItems="Center" height="100%" direction="Column">
             <VBox class="loginCard sapUiMediumMargin" width="350px">
-                <Title text="Safety Portal" level="H1" titleStyle="H1" class="sapUiSmallMarginBottom loginTitle" textAlign="Center" width="100%"/>
+                <Title text="EHSM" level="H1" titleStyle="H1" class="sapUiSmallMarginBottom loginTitle" textAlign="Center" width="100%"/>
                 <Text text="Enter your credentials to access the EHSM Dashboard" class="sapUiSmallMarginBottom loginSubtitle" textAlign="Center" width="100%"/>
                 
                 <Label text="Employee ID" labelFor="empIdInput" class="loginLabel"/>
