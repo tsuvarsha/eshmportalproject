@@ -1,1 +1,47 @@
-/* Enter your custom styles here */
+/* Custom CSS */
+
+/* Background gradient for Login */
+.loginPageBackground {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%) !important;
+}
+
+.loginPageBackground .sapMPageScroll {
+    background: transparent !important;
+}
+
+.loginCard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.loginTitle {
+    font-weight: 700 !important;
+    color: #2c3e50;
+    margin-bottom: 0.5rem !important;
+}
+
+.loginSubtitle {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 2rem !important;
+}
+
+.loginLabel {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 0.25rem;
+}
+
+.loginButton {
+    height: 2.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Dashboard Tweaks */
+.dashboardPage section {
+    background-color: #ecf0f1;
+}

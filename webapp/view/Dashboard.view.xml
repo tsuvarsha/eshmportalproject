@@ -1,0 +1,71 @@
+<mvc:View controllerName="eshm.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="dashboardPage" title="EHSM Safety Dashboard" class="dashboardPage">
+        <headerContent>
+            <Button icon="sap-icon://log" press=".onLogout" tooltip="Logout"/>
+        </headerContent>
+        <IconTabBar id="idIconTabBar" expanded="true" class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter icon="sap-icon://alert" text="Risk Management" key="risk" iconColor="Critical">
+                    <Table id="riskTable" items="{/Z_RISKSet}" growing="true" growingThreshold="20" width="auto">
+                        <headerToolbar>
+                            <OverflowToolbar>
+                                <Title text="Risk Assessment" level="H2"/>
+                            </OverflowToolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column width="12em"><Text text="Risk ID"/></Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Description"/></Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Category"/></Column>
+                            <Column width="8em"><Text text="Severity"/></Column>
+                            <Column width="6em"><Text text="Plant"/></Column>
+                            <Column width="8em"><Text text="Likelihood"/></Column>
+                            <Column minScreenWidth="Desktop" demandPopin="true"><Text text="Measures"/></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <ObjectIdentifier title="{RiskId}" text="{RiskIdentificationDate}"/>
+                                    <Text text="{RiskDescription}"/>
+                                    <Text text="{RiskCategory}"/>
+                                    <ObjectStatus text="{RiskSeverity}" state="{path: 'RiskSeverity', formatter: '.formatter.severityState'}"/>
+                                    <Text text="{Plant}"/>
+                                    <Text text="{Likelihood}"/>
+                                    <Text text="{MitigationMeasures}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+                <IconTabFilter icon="sap-icon://accident" text="Incident Management" key="incident" iconColor="Negative">
+                   <Table id="incidentTable" items="{/Z_INCIDENTSet}" growing="true" growingThreshold="20" width="auto">
+                        <headerToolbar>
+                            <OverflowToolbar>
+                                <Title text="Reported Incidents" level="H2"/>
+                            </OverflowToolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column><Text text="Incident ID"/></Column>
+                            <Column><Text text="Description"/></Column>
+                            <Column><Text text="Category"/></Column>
+                            <Column><Text text="Severity"/></Column>
+                            <Column><Text text="Plant"/></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{IncidentId}"/>
+                                    <Text text="{IncidentDescription}"/>
+                                    <Text text="{IncidentCategory}"/>
+                                    <ObjectStatus text="{IncidentSeverity}" state="Error"/>
+                                    <Text text="{Plant}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+</mvc:View>

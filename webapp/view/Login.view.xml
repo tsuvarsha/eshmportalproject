@@ -1,0 +1,20 @@
+<mvc:View controllerName="eshm.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="loginPage" showHeader="false" class="loginPageBackground">
+        <FlexBox justifyContent="Center" alignItems="Center" height="100%" direction="Column">
+            <VBox class="loginCard sapUiMediumMargin" width="350px">
+                <Title text="Safety Portal" level="H1" titleStyle="H1" class="sapUiSmallMarginBottom loginTitle" textAlign="Center" width="100%"/>
+                <Text text="Enter your credentials to access the EHSM Dashboard" class="sapUiSmallMarginBottom loginSubtitle" textAlign="Center" width="100%"/>
+                
+                <Label text="Employee ID" labelFor="empIdInput" class="loginLabel"/>
+                <Input id="empIdInput" placeholder="00000001" width="100%" class="sapUiSmallMarginBottom" />
+                
+                <Label text="Password" labelFor="passwordInput" class="loginLabel"/>
+                <Input id="passwordInput" type="Password" placeholder="******" width="100%" class="sapUiMediumMarginBottom" />
+                
+                <Button text="Login" type="Emphasized" width="100%" press=".onLogin" class="loginButton" />
+            </VBox>
+        </FlexBox>
+    </Page>
+</mvc:View>
